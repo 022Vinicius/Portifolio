@@ -56,12 +56,3 @@ document.querySelector('#add-calendar').addEventListener('click', () => {
   URL.revokeObjectURL(url);
 });
 
-document.querySelector('#copy-invite').addEventListener('click', async () => {
-  const feedback = document.querySelector('#feedback');
-  try {
-    await navigator.clipboard.writeText(window.location.href);
-    feedback.textContent = 'Link copiado. Agora é só enviar ✦';
-  } catch {
-    feedback.textContent = 'Copie o endereço desta página para compartilhar.';
-  }
-});

@@ -32,7 +32,7 @@ a { color: inherit; }
 .hero-overlay { z-index: -2; background: linear-gradient(90deg, rgba(3, 12, 23, .97) 0%, rgba(3, 12, 23, .76) 42%, rgba(3, 12, 23, .14) 76%), linear-gradient(0deg, rgba(3, 12, 23, .9), transparent 60%); }
 .hero-copy { padding: clamp(36px, 7vw, 92px); align-self: center; }
 .eyebrow { margin: 0 0 20px; color: var(--lime); font: 10px var(--mono); letter-spacing: .11em; text-transform: uppercase; }
-.eyebrow span { display: inline-block; width: 7px; height: 7px; margin-right: 9px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 22px var(--coral); }
+.eyebrow span { display: inline-block; width: 7px; height: 7px; margin-right: 9px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 22px var(--coral); animation: signal-pulse 1.8s ease-in-out infinite; }
 .hello { margin: 0 0 12px; color: #dfe8ec; font-size: clamp(18px, 2vw, 25px); }
 .hero h1, .details h2, .location h2, .closing h2 { margin: 0; letter-spacing: -.065em; line-height: .92; }
 .hero h1 { max-width: 900px; font-size: clamp(60px, 8.3vw, 126px); }
@@ -49,7 +49,7 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .date-card > strong { display: block; margin: 12px 0 0; font-size: clamp(86px, 10vw, 148px); line-height: .75; letter-spacing: -.09em; }
 .date-card > div { display: flex; justify-content: space-between; margin-top: 18px; color: var(--coral); font: 800 21px var(--mono); }
 .date-card p { margin: 24px 0 0; padding-top: 18px; border-top: 1px solid var(--line); color: #d8e1e6; font-size: 13px; }
-.host-sticker { width: clamp(128px, 15vw, 210px); margin: 0; position: absolute; top: clamp(22px, 4vw, 52px); right: clamp(22px, 4vw, 56px); z-index: 3; transform: rotate(4deg); background: #f4efe6; color: var(--ink); padding: 8px 8px 14px; box-shadow: 14px 18px 0 rgba(0,0,0,.28); }
+.host-sticker { width: clamp(128px, 15vw, 210px); margin: 0; position: absolute; top: clamp(22px, 4vw, 52px); right: clamp(22px, 4vw, 56px); z-index: 3; transform: rotate(4deg); background: #f4efe6; color: var(--ink); padding: 8px 8px 14px; box-shadow: 14px 18px 0 rgba(0,0,0,.28); animation: sticker-float 4s ease-in-out infinite; }
 .host-sticker:before { content: ""; position: absolute; width: 58px; height: 20px; top: -11px; left: 50%; transform: translateX(-50%) rotate(-3deg); background: rgba(201,243,106,.82); }
 .host-sticker img { display: block; width: 100%; aspect-ratio: .78; object-fit: cover; object-position: center 25%; filter: saturate(.88) contrast(1.04); }
 .host-sticker figcaption { padding: 11px 5px 0; font: 800 9px/1.35 var(--mono); text-transform: uppercase; transform: rotate(-1deg); }
@@ -89,8 +89,17 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .closing { text-align: center; }
 .closing h2 { margin-inline: auto; max-width: 1050px; font-size: clamp(52px, 7.7vw, 112px); }
 .closing-actions { justify-content: center; }
-.feedback { min-height: 24px; color: var(--lime); font: 10px var(--mono); }
 footer { min-height: 100px; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font: 9px var(--mono); text-transform: uppercase; }
+
+@keyframes sticker-float {
+  0%, 100% { transform: rotate(4deg) translateY(0); }
+  50% { transform: rotate(2deg) translateY(-8px); }
+}
+
+@keyframes signal-pulse {
+  0%, 100% { opacity: .7; transform: scale(.85); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
 
 @media (max-width: 900px) {
   .invite-nav, main, footer { width: min(100% - 28px, 1280px); }
@@ -136,5 +145,5 @@ footer { min-height: 100px; display: flex; align-items: center; justify-content:
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  * { transition: none !important; animation: none !important; }
 }
