@@ -41,8 +41,8 @@ document.querySelector('#add-calendar').addEventListener('click', () => {
     'DTSTART:20261114T230000Z',
     'DTEND:20261115T030000Z',
     'SUMMARY:Aniversário do Vini',
-    'DESCRIPTION:Comemoração do aniversário do Vini no Caldeirão Premium.',
-    'LOCATION:Caldeirão Premium\, Av. Min. Marcos Freire\, 865\, Olinda - PE',
+    'DESCRIPTION:Comemoração do aniversário do Vini no Bar do Amparo.',
+    'LOCATION:Bar do Amparo\, Rua do Amparo\, 3\, Olinda - PE',
     'END:VEVENT',
     'END:VCALENDAR'
   ].join('\r\n');
