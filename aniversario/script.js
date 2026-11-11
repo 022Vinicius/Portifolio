@@ -1,16 +1,6 @@
-const params = new URLSearchParams(window.location.search);
-const guestName = (params.get('nome') || '').trim();
 const birthday = new Date('2026-11-14T20:00:00-03:00');
 
-const greeting = document.querySelector('#saudacao');
-if (guestName) {
-  greeting.textContent = `Ei, ${guestName}!`;
-  document.title = `${guestName}, você vem? — Aniversário do Vini`;
-}
-
-const whatsappMessage = guestName
-  ? `Oi, Vini! Aqui é ${guestName}. Confirmo presença no seu aniversário dia 14! 🎉`
-  : 'Oi, Vini! Confirmo presença no seu aniversário dia 14! 🎉';
+const whatsappMessage = 'Oi, Vini! Confirmo presença no seu aniversário dia 14! 🎉';
 
 document.querySelectorAll('#confirmar-presenca, #confirmar-final').forEach((link) => {
   link.href = `https://wa.me/5581988881223?text=${encodeURIComponent(whatsappMessage)}`;
