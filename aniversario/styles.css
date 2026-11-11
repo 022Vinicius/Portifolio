@@ -115,7 +115,8 @@ footer { min-height: 100px; display: flex; align-items: center; justify-content:
   .invite-nav > span { max-width: 150px; text-align: right; }
   .hero { min-height: 780px; }
   .hero-copy { padding: 46px 22px 272px; }
-  .host-sticker { width: 112px; }
+  .host-sticker { top: 12px; right: 12px; width: 82px; padding: 6px 6px 10px; box-shadow: 8px 10px 0 rgba(0,0,0,.28); }
+  .host-sticker figcaption { padding-top: 7px; font-size: 7px; }
   .hero h1 { font-size: clamp(54px, 16vw, 76px); }
   .lead { font-size: 15px; }
   .hero-actions .button, .location-actions .button, .closing-actions .button { width: 100%; }
