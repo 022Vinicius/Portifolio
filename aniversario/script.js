@@ -1,6 +1,6 @@
 const birthday = new Date('2026-11-14T20:00:00-03:00');
 
-const whatsappMessage = 'Oi, Vini! Confirmo presença na comemoração do dia 14! 🎉';
+const whatsappMessage = 'Oi, Vini! Confirmo presença na comemoração do dia 14, no Bar do Amparo! 🎉';
 
 document.querySelectorAll('#confirmar-presenca, #confirmar-final').forEach((link) => {
   link.href = `https://wa.me/5581988881223?text=${encodeURIComponent(whatsappMessage)}`;
