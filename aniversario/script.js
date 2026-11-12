@@ -1,6 +1,6 @@
 const birthday = new Date('2026-11-14T20:00:00-03:00');
 
-const whatsappMessage = 'Oi, Vini! Confirmo presença no seu aniversário dia 14! 🎉';
+const whatsappMessage = 'Oi, Vini! Confirmo presença na comemoração do dia 14! 🎉';
 
 document.querySelectorAll('#confirmar-presenca, #confirmar-final').forEach((link) => {
   link.href = `https://wa.me/5581988881223?text=${encodeURIComponent(whatsappMessage)}`;
@@ -40,7 +40,7 @@ document.querySelector('#add-calendar').addEventListener('click', () => {
     'DTSTAMP:20261111T120000Z',
     'DTSTART:20261114T230000Z',
     'DTEND:20261115T030000Z',
-    'SUMMARY:Aniversário do Vini',
+    'SUMMARY:Comemoração do aniversário do Vini',
     'DESCRIPTION:Comemoração do aniversário do Vini no Bar do Amparo.',
     'LOCATION:Bar do Amparo\, Rua do Amparo\, 3\, Olinda - PE',
     'END:VEVENT',
